@@ -21,71 +21,6 @@ session_start();
     <title>Online Store</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        /* Custom Styles for Navigation Bar */
-        .navbar {
-            background-color: #2c3e50 !important; /* Dark slate gray */
-            padding: 1rem 0;
-        }
-
-        .navbar-brand {
-            color: #ecf0f1 !important; /* Light gray */
-            font-size: 2rem;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #ecf0f1;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ecf0f1 !important;
-            padding: 0.75rem 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #f39c12 !important; /* Orange */
-        }
-
-        .navbar-nav .active > .nav-link {
-            color: #f39c12 !important;
-            font-weight: bold;
-        }
-
-        .dropdown-menu {
-            background-color: #34495e; /* Darker slate gray */
-            border: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .dropdown-item {
-            color: #ecf0f1;
-            transition: background-color 0.3s ease;
-        }
-
-        .dropdown-item:hover {
-            background-color: #f39c12;
-            color: #2c3e50;
-        }
-
-        .icon-link svg {
-            fill: #ecf0f1 !important;
-            transition: fill 0.3s ease;
-        }
-
-        .icon-link:hover svg {
-            fill: #f39c12 !important;
-        }
-
-        .badge-danger {
-            background-color: #e74c3c; /* Red */
-        }
-
-        .fade-in-section {
-            opacity: 1; /* Ensure it's visible */
-            transition: opacity 0.5s ease-in-out; /* Optional fade-in */
-        }
-    </style>
 </head>
 <body class="store-body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fade-in-section">
@@ -118,7 +53,7 @@ session_start();
                     <g>
                         <g>
                             <path d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z     M685.766,247.188l-67.077,262.64H131.199L81.928,246.756L685.766,247.188z"/>
-                            <path d="M578.418,825.641c59.961,0,108.743-48.783,108.743-108.744s-48.782-108.742-108.743-108.742H168.717     c-59.961,0-108.744,48.781-108.744,108.742s48.782,108.744,108.744,108.744c59.962,0,108.743-48.783,108.743-108.744     c0-14.4-2.821-28.152-7.927-40.742h208.069c-5.107,12.59-7.928,26.342-7.928,40.742     C469.675,776.858,518.457,825.641,578.418,825.641z M209.46,716.897c0,22.467-18.277,40.744-40.743,40.744     c-22.466,0-40.744-18.277-40.744-40.744c0-22.465,18.277-40.742,40.744-40.742C191.183,676.155,209.46,694.432,209.46,716.897z     M619.162,716.897c0,22.467-18.277,40.744-40.743,40.744s-40.743-18.277-40.743-40.744c0-22.465,18.277-40.742,40.743-40.742     S619.162,694.432,619.162,716.897z"/>
+                            <path d="M578.418,825.641c59.961,0,108.743-48.783,108.743-108.744s-48.782-108.742-108.743-108.742H168.717    c-59.961,0-108.744,48.781-108.744,108.742s48.782,108.744,108.744,108.744c59.962,0,108.743-48.783,108.743-108.744    c0-14.4-2.821-28.152-7.927-40.742h208.069c-5.107,12.59-7.928,26.342-7.928,40.742    C469.675,776.858,518.457,825.641,578.418,825.641z M209.46,716.897c0,22.467-18.277,40.744-40.743,40.744    c-22.466,0-40.744-18.277-40.744-40.744c0-22.465,18.277-40.742,40.744-40.742C191.183,676.155,209.46,694.432,209.46,716.897z     M619.162,716.897c0,22.467-18.277,40.744-40.743,40.744s-40.743-18.277-40.743-40.744c0-22.465,18.277-40.742,40.743-40.742    S619.162,694.432,619.162,716.897z"/>
                         </g>
                     </g>
                 </svg>
@@ -129,7 +64,7 @@ session_start();
                     <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Hello, <?php echo isset($_SESSION['user']) ? $_SESSION['user']['name'] : 'Guest'; ?>
                     </a>
-                    <ul class="dropdown-menu animate-dropdown dropdown-menu-end">
+                    <ul class="dropdown-menu animate-dropdown">
                     <?php if (isLoggedIn()): ?>
                         <li><a class="dropdown-item" href="my-account.php">My Account</a></li>
                         <?php if (isset($_SESSION['user']) && $_SESSION['user']['role_id'] == 1): ?>

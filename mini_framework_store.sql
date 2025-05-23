@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 23, 2025 at 05:20 PM
+-- Generation Time: May 24, 2025 at 01:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,6 +70,16 @@ CREATE TABLE `products` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `slug`, `image_path`, `category_id`, `created_at`, `updated_at`) VALUES
+(16, 'Ginamos ', 'made in philippines ', 50.00, 'ginamos-', 'uploads/6830f81753ac0_shopping.webp', 10, '2025-05-23 22:35:03', '2025-05-23 16:35:03'),
+(17, 'Uyap', 'Made in philippines ', 50.00, 'uyap', 'uploads/6830f923b63c2_shopping (1).webp', 10, '2025-05-23 22:39:31', '2025-05-23 16:39:31'),
+(18, 'Bangus ', 'crunchy', 350.00, 'bangus-', 'uploads/6830fa2939196_shopping (2).webp', 10, '2025-05-23 22:43:53', '2025-05-23 16:43:53'),
+(19, 'Salmon', 'boneless', 99999999.99, 'salmon', 'uploads/6830faa953caa_shopping (3).webp', 10, '2025-05-23 22:46:01', '2025-05-23 16:46:01');
 
 -- --------------------------------------------------------
 
@@ -140,7 +150,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `password`, `address`, `phone`, `birthdate`, `created_at`, `updated_at`) VALUES
 (6, 1, 'daniel', 'andreestrera20@gmail.com', '$2y$10$gtVNfn.i02IrJNGww.LkZuHl4BnZtrz243tbU16FZ8fhjYIz8jSz6', 'sanfernando', '01236547895', '2025-05-01', '2025-05-23 12:58:03', '2025-05-23 14:57:44'),
-(8, 2, 'andre', 'andreestrera12@gmail.com', '$2y$10$./i0WjMGJITXdTUauLjWs.XVImja3h9qNzjF7GqO87ZdveTAuTgRm', 'naga', '01236547895', '2025-05-14', '2025-05-23 14:25:06', '2025-05-23 14:32:53');
+(8, 2, 'andre', 'andreestrera12@gmail.com', '$2y$10$./i0WjMGJITXdTUauLjWs.XVImja3h9qNzjF7GqO87ZdveTAuTgRm', 'naga', '01236547895', '2025-05-14', '2025-05-23 14:25:06', '2025-05-23 14:32:53'),
+(22, 2, 'bayot', 'dandan@yahoo.com', '$2y$10$3Q/l6Uxa1hrpabuA11Ym4u6RwcsksoA7kRXjTaQgY/K5rjdqtgMmy', '', '', NULL, '2025-05-23 22:33:13', '2025-05-23 22:33:45');
 
 --
 -- Indexes for dumped tables
@@ -208,7 +219,7 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `product_categories`
@@ -226,7 +237,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
